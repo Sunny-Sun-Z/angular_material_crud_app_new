@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Max",
+      "lastName": "Zheng",
+      "dob": "1969-07-30T04:00:00.000Z",
+      "email": "d",
+      "gender": "male",
+      "education": "Masters",
+      "company": "g",
+      "experience": 10,
+      "package": 4,
+      "id": 4
+    },
+    {
+      "firstName": "Andy",
+      "lastName": "zheng",
+      "dob": "1969-07-30T04:00:00.000Z",
+      "email": "d",
+      "gender": "male",
+      "education": "Masters",
+      "company": "g",
+      "experience": 10,
+      "package": 4,
+      "id": 5
+    }
+  ]
+}
