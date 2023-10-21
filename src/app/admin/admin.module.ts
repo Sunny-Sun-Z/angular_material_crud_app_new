@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminRoutingModule } from './admin-routing.module';
+import { AdminComponent } from './admin.component';
+
+import { HeroComponent } from './hero/hero/hero.component';
+import { EmployeeDashBoardComponent } from './employee/employee-dash-board/employee-dash-board.component';
+
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
-import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
+//import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -28,33 +31,35 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { PageNotFouondComponent } from './page-not-fouond/page-not-fouond.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { AdminModule } from './admin/admin.module';
-
-
-
+import { EmpAddEditComponent } from '../emp-add-edit/emp-add-edit.component';
 @NgModule({
   declarations: [
-    AppComponent,
-   // EmpAddEditComponent,
-    PageNotFouondComponent,
-    AboutUsComponent
+    AdminComponent,
+    HeroComponent,
+    EmployeeDashBoardComponent,
+    EmpAddEditComponent,
   ],
   imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-   
-    DashboardModule,
-    AdminModule,
+    CommonModule,
+    AdminRoutingModule,
+    MatSlideToggleModule,
+    MatButtonModule,
     MatToolbarModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatListModule,
+    MatGridListModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
     MatIconModule,
-    MatButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    MatSnackBarModule,
+  ]
 })
-export class AppModule { }
+export class AdminModule { }

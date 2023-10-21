@@ -1,0 +1,12 @@
+.main-body{
+    max-width: 90%;
+    margin: auto;
+}
+
+.addButton {
+   align-content: end;
+}
+.filterAdd{
+    flex: 2 1;
+}
+

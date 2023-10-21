@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AdminModule } from './admin/admin.module';
 
-const routes: Routes = [];
+
+
+
+const routes: Routes = [
+  
+  { path: '', redirectTo: 'dashboard', pathMatch:'full'},
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule),
+   // canMatch: [authGuard]
+  },
+ 
+ // {path: 'Admin', component:AdminComponent},
+ //{path: '**', component:PageNotFouondComponent}
+  {path: 'about', component: AboutUsComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
