@@ -9,7 +9,7 @@ import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
@@ -32,6 +32,11 @@ import { PageNotFouondComponent } from './page-not-fouond/page-not-fouond.compon
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AdminModule } from './admin/admin.module';
+import { EmployeeComponent } from './rxjs-component-only/employee/employee.component';
+import { EmployeeDetailComponent } from './rxjs-component-only/employee/employee-detail.component';
+
+import { EmpListComponent } from './rxjs-component-only/emp-list/emp-list.component';
+
 
 
 
@@ -40,9 +45,17 @@ import { AdminModule } from './admin/admin.module';
     AppComponent,
    // EmpAddEditComponent,
     PageNotFouondComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    
+   
+    // EmployeeComponent,
+    // EmployeeDetailComponent,
+    // EmployeeListComponent,
+   
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
@@ -52,7 +65,7 @@ import { AdminModule } from './admin/admin.module';
     AdminModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

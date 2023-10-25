@@ -40,6 +40,35 @@ export class EmpAddEditComponent implements OnInit {
   ngOnInit(): void {
     this.employeeForm.patchValue(this.currentEmployeeData);
   }
+  // onFormSubmit() {
+  //   if (this.employeeForm.valid) {
+  //     if (!this.currentEmployeeData) {
+  //       //console.log(this.employeeForm.value)
+  //       this.service.addEmployee(this.employeeForm.value).subscribe({
+  //         next: (val: Employee) => {
+  //           this.coreService.openSnackBar('Add Employee successfully!')
+  //           this.dialogRef.close(true);
+  //         },
+  //         error: (err: any) => {
+  //           console.log(`addemployee error: ${err}`);
+  //         }
+  //       })
+  //     }
+  //     else {
+  //       this.service.updateEmployee(this.employeeForm.value).subscribe({
+  //         next: (val: Employee) => {           
+  //           this.coreService.openSnackBar('Update Employee successfully!')
+  //           this.dialogRef.close(true);
+  //         },
+  //         error: (err: any) => {
+  //           console.log(`updateEmployee error: ${err}`);
+  //         }
+  //       })
+  //     }
+  //   }
+  // }
+
+
   onFormSubmit() {
     if (this.employeeForm.valid) {
       if (!this.currentEmployeeData) {

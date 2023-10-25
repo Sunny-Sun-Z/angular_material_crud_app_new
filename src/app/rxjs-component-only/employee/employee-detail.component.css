@@ -1,0 +1,11 @@
+
+  label{
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+  }
+
+  .container{
+    padding: 10px;
+    display: flex 2 1;
+  }

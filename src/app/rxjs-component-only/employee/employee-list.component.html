@@ -1,0 +1,6 @@
+<div class="container">
+<mat-card-actions><app-employee *ngFor="let e of employees$ |async" [employee] = e (selected)="onSelected($event)"></app-employee></mat-card-actions>
+<!-- <app-employee-detail *ngIf="selectedEmployee" [employee]=selectedEmployee></app-employee-detail> -->
+
+<router-outlet></router-outlet>
+</div>
