@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, Optional } from '@angular/core';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, filter, map, tap } from 'rxjs';
 import { Employee } from './employee';
+import { Emp } from './emp';
 
 const options  = {
   headers: new HttpHeaders({ "Content-Type": "application/json"})
@@ -21,6 +22,24 @@ export class EmployeeService {
     //console.log('getEmployees');
     
     return this.http.get<Employee[]>(this.url, options);
+  }
+
+  getEmps(): Observable<Emp[]> {
+    //console.log(`aaa:${this.http.get(this.url)}`);
+    //console.log('getEmployees');
+    
+    return this.getEmployees().pipe(
+      map(emps=>emps.map(({id,firstName, email})=> {
+        return {id, firstName,email}
+      })
+    ))
+  }
+  
+  getEmp(id: number) : Observable<Emp>{
+    return this.getEmps().pipe(
+      map(emps=> 
+        emps.filter(emp=>emp.id===id)[0])
+    )
   }
 
   getEmployee(id: number): Observable<Employee> {

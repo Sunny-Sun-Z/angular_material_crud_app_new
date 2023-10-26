@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>Employee: {{employee.firstName}}  detail</mat-card-title>
+        <form [formGroup]="empForm" #formDir="ngForm">
+            <!-- <div [hidden]="formDir.submitted"> -->
+            <mat-card-actions class="form-group">
+                <mat-card-actions>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" formControlName="firstName" name="firstName" id="firstName">
+                </mat-card-actions>
+                <mat-card-actions *ngIf="firstName.invalid && (firstName.touched ||firstName.dirty)">
+
+                    <div *ngIf="firstName.errors?.['required']">First Name Required.</div>
+                    <div *ngIf="firstName.errors?.['minlength']">FirstName must be 4 chars long!</div>
+
+                </mat-card-actions>
+
+            </mat-card-actions>
+
+            <mat-card-actions class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" formControlName="email" name="email" id="email" >
+                <div *ngIf="email.invalid &&(email.touched||email.dirty)">
+                    <div *ngIf="email.errors?.['required']">Email required.</div>
+                    <div *ngIf="email.errors?.['minlength']">Email 4 chars long.</div>
+                    <div *ngIf="email.errors?.['email']">Email type.</div>
+                </div>
+            </mat-card-actions>
+            <mat-card-actions>
+                <button type="submit">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>

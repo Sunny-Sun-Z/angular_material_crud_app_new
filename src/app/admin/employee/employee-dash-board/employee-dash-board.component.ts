@@ -26,7 +26,7 @@ export class EmployeeDashBoardComponent {
  // addEditStatus = 'add'
  // currentEmployee?:Employee;
   displayedColumns: string[] = ['firstName', 'lastName', 'dob', 'email','gender','education','company','experience','package','action' ];
-  dataSource: MatTableDataSource<Employee>= new MatTableDataSource();;
+  dataSource: MatTableDataSource<Employee>= new MatTableDataSource();
   //employees: MatTableDataSource<Employee>;
 
   constructor(private dialog: MatDialog,

@@ -1,0 +1,10 @@
+<table>
+    <tr *ngFor="let item of employees$ |async">
+      <td>
+       <button type="button"  (click)="employeeSelected(item)">{{item.firstName}}</button>
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="item.email"/>
+       </td>
+   </tr>
+</table>

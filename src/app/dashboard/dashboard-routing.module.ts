@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { EmployeeDetailComponent } from '../rxjs-component-only/employee/employee-detail.component';
 import { EmployeeListComponent } from '../rxjs-component-only/employee/employee-list.component';
 import { SearchFunctionComponent } from '../rxjs-component-only/oasis/search-function/search-function.component';
+import { EmpListComponent } from '../rxjs-component-only/oasis/emp-list/emp-list.component';
 
 const routes: Routes = [
   {
@@ -12,10 +13,17 @@ const routes: Routes = [
       {
         path: 'employees', component: EmployeeListComponent,
         children: [
-          { path: 'details/:id', component: EmployeeDetailComponent }
+          { path: 'details/:id', component: EmployeeDetailComponent },
+         
         ]
       },
-      {path: 'oasis', component: SearchFunctionComponent}
+      {path: 'oasis', component: SearchFunctionComponent,
+      children:[
+        {path: 'emplist', component: EmpListComponent},
+        {path: 'empdetails/:id', component: EmpListComponent}
+      ]
+    },
+      
     ]
   },
   

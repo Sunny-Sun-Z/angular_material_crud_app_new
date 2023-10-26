@@ -1,1 +1,10 @@
-<p>emp-list works!</p>
+<!-- <app-emp [employees$]= employees$ (selected)="selectedId.next($event)"></app-emp>
+
+ <app-emp-details *ngIf="selectedEmp" [employee]= "selectedEmp |async"></app-emp-details> -->
+
+
+ 
+<app-emp [employees$]= employees$ (selected)="onSelected($event)"></app-emp>
+<app-emp-details *ngIf="selectedEmp" [employee]= selectedEmp></app-emp-details>
+
+<!-- <router-outlet></router-outlet> -->

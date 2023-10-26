@@ -34,6 +34,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { AdminModule } from './admin/admin.module';
 import { EmployeeComponent } from './rxjs-component-only/employee/employee.component';
 import { EmployeeDetailComponent } from './rxjs-component-only/employee/employee-detail.component';
+import { EmpDetailsComponent } from './rxjs-component-only/oasis/emp-list/emp-details.component';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { EmployeeDetailComponent } from './rxjs-component-only/employee/employee
    // EmpAddEditComponent,
     PageNotFouondComponent,
     AboutUsComponent,
+    
+   
    
     
    

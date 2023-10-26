@@ -12,9 +12,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+
 
 import { SearchFunctionComponent } from '../rxjs-component-only/oasis/search-function/search-function.component';
 import { EmpListComponent } from '../rxjs-component-only/oasis/emp-list/emp-list.component';
+import { EmpComponent } from '../rxjs-component-only/oasis/emp/emp.component';
+import { EmpDetailsComponent } from '../rxjs-component-only/oasis/emp-list/emp-details.component';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -23,6 +27,8 @@ import { EmpListComponent } from '../rxjs-component-only/oasis/emp-list/emp-list
     EmployeeListComponent,
     SearchFunctionComponent,
     EmpListComponent,
+    EmpComponent,
+    EmpDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +40,8 @@ import { EmpListComponent } from '../rxjs-component-only/oasis/emp-list/emp-list
     MatButtonModule,
     MatMenuModule,
     MatCardModule,
-  
+    MatTableModule,
+    
   ]
 })
 export class DashboardModule { }
