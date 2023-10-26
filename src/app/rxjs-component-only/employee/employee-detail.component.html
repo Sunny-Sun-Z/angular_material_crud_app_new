@@ -46,10 +46,11 @@
 
             <mat-card-actions class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" formControlName="email" name="email" id="email">
+                <input type="email" formControlName="email" name="email" id="email" >
                 <div *ngIf="email.invalid &&(email.touched||email.dirty)">
                     <div *ngIf="email.errors?.['required']">Email required.</div>
                     <div *ngIf="email.errors?.['minlength']">Email 4 chars long.</div>
+                    <div *ngIf="email.errors?.['email']">Email type.</div>
                 </div>
             </mat-card-actions>
             <mat-card-actions>

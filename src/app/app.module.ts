@@ -35,17 +35,13 @@ import { AdminModule } from './admin/admin.module';
 import { EmployeeComponent } from './rxjs-component-only/employee/employee.component';
 import { EmployeeDetailComponent } from './rxjs-component-only/employee/employee-detail.component';
 
-import { EmpListComponent } from './rxjs-component-only/emp-list/emp-list.component';
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
    // EmpAddEditComponent,
     PageNotFouondComponent,
     AboutUsComponent,
+   
     
    
     // EmployeeComponent,

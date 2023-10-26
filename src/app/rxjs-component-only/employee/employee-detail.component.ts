@@ -13,25 +13,37 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class EmployeeDetailComponent implements OnInit {
   //constructor(private srvice: EmployeeService, private fb: FormBuilder){}
   employee?: Employee
-  empForm: FormGroup
+  empForm: FormGroup = this.fb.group({
+    id: 0,
+    firstName:['a', [Validators.required, Validators.minLength(4)]],
+    lastName: 'b',
+    dob: new Date('07/30/1969'),
+    email: ['d', [Validators.email]],
+    gender: 'male',
+    education: 'Masters',
+    company: 'g',
+    experience: 10,
+    package: 4,
+    
+  })
 
   constructor(private service: EmployeeService, private route: ActivatedRoute, private fb: FormBuilder) {
     //console.log('aaa', this.route.paramMap)
     // this.route.paramMap.subscribe(
     //   (p) => this.getEmployee(p.get('id')) 
     // )
-    this.empForm = this.fb.group({
-      firstName: 'a',
-      lastName: 'b',
-      dob: new Date('07/30/1969'),
-      email: 'd',
-      gender: 'male',
-      education: 'Masters',
-      company: 'g',
-      experience: 10,
-      package: 4,
-      id: null
-    })
+    // this.empForm = this.fb.group({
+    //   firstName:['a', [Validators.required, Validators.minLength(4)]],
+    //   lastName: 'b',
+    //   dob: new Date('07/30/1969'),
+    //   email: 'd',
+    //   gender: 'male',
+    //   education: 'Masters',
+    //   company: 'g',
+    //   experience: 10,
+    //   package: 4,
+    //   id: null
+    // })
 
     this.route.paramMap.pipe(
       switchMap(
@@ -68,18 +80,18 @@ export class EmployeeDetailComponent implements OnInit {
   }
 
   onSubmit() {
-    this.empForm = this.fb.group({
-      firstName: 'a',
-      lastName: 'b',
-      dob: new Date('07/30/1969'),
-      email: 'd',
-      gender: 'male',
-      education: 'Masters',
-      company: 'g',
-      experience: 10,
-      package: 4,
-      id: null
-    })
+    // this.empForm = this.fb.group({
+    //   firstName: 'a',
+    //   lastName: 'b',
+    //   dob: new Date('07/30/1969'),
+    //   email: 'd',
+    //   gender: 'male',
+    //   education: 'Masters',
+    //   company: 'g',
+    //   experience: 10,
+    //   package: 4,
+    //   id: null
+    // })
   }
 
   get firstName() {

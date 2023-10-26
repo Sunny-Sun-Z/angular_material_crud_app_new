@@ -96,6 +96,4 @@ export class EmpAddEditComponent implements OnInit {
       }
     }
   }
-
- 
 }

@@ -14,7 +14,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 
 import { SearchFunctionComponent } from '../rxjs-component-only/oasis/search-function/search-function.component';
-import { EmpListComponent } from '../rxjs-component-only/emp-list/emp-list.component';
+import { EmpListComponent } from '../rxjs-component-only/oasis/emp-list/emp-list.component';
 @NgModule({
   declarations: [
     DashboardComponent,
